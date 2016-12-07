@@ -127,6 +127,13 @@
         "in": "header"
       },
       {
+        "name": "X-QS-Fetch-If-Unmodified-Since",
+        "description": "Check whether fetch target object has not been modified",
+        "type": "string",
+        "format": "date-time-rfc822",
+        "in": "header"
+      },
+      {
         "name": "Body",
         "description": "The request body",
         "in": "body",

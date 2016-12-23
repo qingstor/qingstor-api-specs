@@ -97,6 +97,12 @@
     "string_not_like": {
       "$ref": "./definitions.json#/string_not_like"
     },
+    "ip_address": {
+      "$ref": "./definitions.json#/ip_address"
+    },
+    "not_ip_address": {
+      "$ref": "./definitions.json#/not_ip_address"
+    },
     "is_null": {
       "$ref": "./definitions.json#/is_null"
     },

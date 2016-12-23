@@ -242,24 +242,6 @@
         "in": "header"
       },
       {
-        "name": "X-QS-Encryption-Customer-Algorithm",
-        "description": "Encryption algorithm of the object",
-        "type": "string",
-        "in": "header"
-      },
-      {
-        "name": "X-QS-Encryption-Customer-Key",
-        "description": "Encryption key of the object",
-        "type": "string",
-        "in": "header"
-      },
-      {
-        "name": "X-QS-Encryption-Customer-Key-MD5",
-        "description": "MD5sum of encryption key",
-        "type": "string",
-        "in": "header"
-      },
-      {
         "name": "If-Modified-Since",
         "description": "Check whether the object has been modified",
         "type": "string",
@@ -282,6 +264,24 @@
       {
         "name": "If-None-Match",
         "description": "Check whether the ETag does not match",
+        "type": "string",
+        "in": "header"
+      },
+      {
+        "name": "X-QS-Encryption-Customer-Algorithm",
+        "description": "Encryption algorithm of the object",
+        "type": "string",
+        "in": "header"
+      },
+      {
+        "name": "X-QS-Encryption-Customer-Key",
+        "description": "Encryption key of the object",
+        "type": "string",
+        "in": "header"
+      },
+      {
+        "name": "X-QS-Encryption-Customer-Key-MD5",
+        "description": "MD5sum of encryption key",
         "type": "string",
         "in": "header"
       }

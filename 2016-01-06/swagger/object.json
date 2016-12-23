@@ -236,6 +236,42 @@
     },
     "parameters": [
       {
+        "name": "response-expires",
+        "description": "Specified the Expires response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-cache-control",
+        "description": "Specified the Cache-Control response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-type",
+        "description": "Specified the Content-Type response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-language",
+        "description": "Specified the Content-Language response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-encoding",
+        "description": "Specified the Content-Encoding response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-disposition",
+        "description": "Specified the Content-Disposition response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
         "name": "Range",
         "description": "Specified range of the object",
         "type": "string",

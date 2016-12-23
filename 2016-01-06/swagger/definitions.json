@@ -233,6 +233,12 @@
       "string_not_like": {
         "$ref": "#/definitions/string_not_like"
       },
+      "ip_address": {
+        "$ref": "#/definitions/ip_address"
+      },
+      "not_ip_address": {
+        "$ref": "#/definitions/not_ip_address"
+      },
       "is_null": {
         "$ref": "#/definitions/is_null"
       }
@@ -257,6 +263,32 @@
     "properties": {
       "Referer": {
         "description": "Refer url",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "ip_address": {
+    "description": "IP address rules",
+    "type": "object",
+    "properties": {
+      "source_ip": {
+        "description": "Source IP",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "not_ip_address": {
+    "description": "Not IP address rules",
+    "type": "object",
+    "properties": {
+      "source_ip": {
+        "description": "Source IP",
         "type": "array",
         "items": {
           "type": "string"

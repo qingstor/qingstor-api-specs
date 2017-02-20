@@ -45,6 +45,9 @@
     "/{bucketName}?mirror": {
       "$ref": "./bucket_external_mirror.json"
     },
+    "/{bucketName}?uploads": {
+      "$ref": "./bucket_uploads.json"
+    },
     "/{bucketName}/{objectKey}": {
       "$ref": "./object.json"
     },
@@ -111,6 +114,9 @@
     },
     "key_delete_error": {
       "$ref": "./definitions.json#/key_delete_error"
+    },
+    "uploads": {
+      "$ref": "./definitions.json#/uploads"
     }
   }
 }

@@ -348,5 +348,23 @@
         "type": "string"
       }
     }
+  },
+  "uploads": {
+    "type": "object",
+    "properties": {
+      "created": {
+        "description": "Object part created time",
+        "type": "string",
+        "format": "date-time"
+      },
+      "key": {
+        "description": "Object key",
+        "type": "string"
+      },
+      "upload_id": {
+        "description": "Object upload id",
+        "type": "string"
+      }
+    }
   }
 }

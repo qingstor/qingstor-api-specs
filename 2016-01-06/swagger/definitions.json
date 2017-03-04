@@ -46,6 +46,10 @@
         "description": "Last modified time in unix time format",
         "type": "integer"
       },
+      "encrypted": {
+        "description": "Whether this key is encrypted",
+        "type": "boolean"
+      },
       "created": {
         "description": "Object created time",
         "type": "string",

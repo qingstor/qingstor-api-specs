@@ -1,9 +1,7 @@
 # QingStor API Specs
 
-<span style="display: inline-block">
 [![Build Status](https://travis-ci.org/yunify/qingstor-api-specs.svg?branch=master)](https://travis-ci.org/yunify/qingstor-api-specs)
 [![License](http://img.shields.io/badge/license-apache%20v2-blue.svg)](https://github.com/yunify/qingstor-api-specs/blob/master/LICENSE)
-</span>
 
 Specifications of QingStor APIs.
 

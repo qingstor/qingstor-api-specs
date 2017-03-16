@@ -84,7 +84,7 @@
       "url": "https://docs.qingcloud.com/qingstor/api/bucket/cors/delete_cors.html"
     },
     "responses": {
-      "200": {
+      "204": {
         "description": "OK"
       }
     }

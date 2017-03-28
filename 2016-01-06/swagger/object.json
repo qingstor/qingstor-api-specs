@@ -331,6 +331,11 @@
             "description": "MD5sum of the object",
             "type": "string"
           },
+          "Content-Length": {
+            "description": "Object content length",
+            "type": "integer",
+            "format": "int64"
+          },
           "Content-Range": {
             "description": "Range of response data content",
             "type": "string"

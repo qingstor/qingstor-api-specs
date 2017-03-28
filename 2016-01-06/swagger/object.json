@@ -25,6 +25,7 @@
         "name": "Content-Length",
         "description": "Object content size",
         "type": "integer",
+        "format": "int64",
         "required": true,
         "in": "header"
       },
@@ -422,7 +423,8 @@
           },
           "Content-Length": {
             "description": "Object content length",
-            "type": "integer"
+            "type": "integer",
+            "format": "int64"
           },
           "Last-Modified": {
             "type": "string",

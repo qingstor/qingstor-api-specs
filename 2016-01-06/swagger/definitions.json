@@ -40,7 +40,8 @@
       },
       "size": {
         "description": "Object content size",
-        "type": "integer"
+        "type": "integer",
+        "format": "int64"
       },
       "modified": {
         "description": "Last modified time in unix time format",
@@ -319,7 +320,8 @@
       },
       "size": {
         "description": "Object part size",
-        "type": "integer"
+        "type": "integer",
+        "format": "int64"
       },
       "etag": {
         "description": "MD5sum of the object part",

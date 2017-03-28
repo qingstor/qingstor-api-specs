@@ -25,11 +25,13 @@
           "properties": {
             "count": {
               "description": "Objects count in the bucket",
-              "type": "integer"
+              "type": "integer",
+              "format": "int64"
             },
             "size": {
               "description": "Bucket storage size",
-              "type": "integer"
+              "type": "integer",
+              "format": "int64"
             },
             "location": {
               "description": "QingCloud Zone ID",

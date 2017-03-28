@@ -119,6 +119,7 @@
           "name": "Content-Length",
           "description": "Object multipart content length",
           "type": "integer",
+          "format": "int64",
           "in": "header"
         },
         {

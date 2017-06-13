@@ -31,8 +31,14 @@
         "in": "query"
       },
       {
-        "name": "marker",
-        "description": "Limit results to keys that start at this marker",
+        "name": "key_marker",
+        "description": "Limit results returned from the first key after key_marker sorted by alphabetical order",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "upload_id_marker",
+        "description": "Limit results returned from the first uploading segment after upload_id_marker sorted by the time of upload_id",
         "type": "string",
         "in": "query"
       },
@@ -76,8 +82,12 @@
               "description": "Marker that specified in request parameters",
               "type": "string"
             },
-            "next_marker": {
-              "description": "The last key in keys list",
+            "next_key_marker": {
+              "description": "The last key in uploads list",
+              "type": "string"
+            },
+            "next_upload_id_marker": {
+              "description": "The last upload_id in uploads list",
               "type": "string"
             },
             "common_prefixes": {

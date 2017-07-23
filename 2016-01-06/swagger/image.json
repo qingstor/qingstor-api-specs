@@ -1,0 +1,96 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/objectKey"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Object"
+    ],
+    "operationId": "ImageProcess",
+    "summary": "Image Process",
+    "description": "Image process with the action on the object",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/data_process/image_process/index.html"
+    },
+    "parameters": [
+      {
+        "name": "action",
+        "description": "Image process action",
+        "type": "string",
+        "required": true,
+        "in": "query"
+      },
+      {
+        "name": "response-expires",
+        "description": "Specified the Expires response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-cache-control",
+        "description": "Specified the Cache-Control response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-type",
+        "description": "Specified the Content-Type response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-language",
+        "description": "Specified the Content-Language response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-encoding",
+        "description": "Specified the Content-Encoding response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "response-content-disposition",
+        "description": "Specified the Content-Disposition response header",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "If-Modified-Since",
+        "description": "Check whether the object has been modified",
+        "type": "string",
+        "format": "date-time-rfc822",
+        "in": "header"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "type": "string",
+          "description": "The response body",
+          "format": "binary"
+        },
+        "headers": {
+          "Content-Length": {
+            "description": "Object content length",
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "304": {
+        "description": "Not modified"
+      }
+    }
+  }
+}

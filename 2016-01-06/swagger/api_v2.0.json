@@ -56,6 +56,9 @@
     },
     "/{bucketName}/{objectKey}?upload_id": {
       "$ref": "./object_multipart.json#/upload_id"
+    },
+    "/{bucketName}/{objectKey}?image": {
+      "$ref": "./image.json"
     }
   },
   "parameters": {

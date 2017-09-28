@@ -340,6 +340,10 @@
             "description": "Range of response data content",
             "type": "string"
           },
+          "Last-Modified": {
+            "type": "string",
+            "format": "date-time-rfc822"
+          },
           "X-QS-Encryption-Customer-Algorithm": {
             "description": "Encryption algorithm of the object",
             "type": "string"

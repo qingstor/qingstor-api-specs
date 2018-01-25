@@ -532,6 +532,12 @@
             "type": "string"
           }
         }
+      },
+      "304": {
+        "description": "Object not modified"
+      },
+      "412": {
+        "description": "Object precondition failed"
       }
     }
   },

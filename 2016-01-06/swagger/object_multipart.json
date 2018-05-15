@@ -45,6 +45,16 @@
           "description": "MD5sum of encryption key",
           "type": "string",
           "in": "header"
+        },
+        {
+          "name": "X-QS-Storage-Class",
+          "description": "Specify the storage class for object",
+          "type": "string",
+          "in": "header",
+          "enum": [
+            "STANDARD",
+            "STANDARD_IA"
+          ]
         }
       ],
       "responses": {

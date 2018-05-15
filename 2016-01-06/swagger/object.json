@@ -135,6 +135,16 @@
         "in": "header"
       },
       {
+        "name": "X-QS-Storage-Class",
+        "description": "Specify the storage class for object",
+        "type": "string",
+        "in": "header",
+        "enum": [
+          "STANDARD",
+          "STANDARD_IA"
+        ]
+      },
+      {
         "name": "Body",
         "description": "The request body",
         "in": "body",
@@ -348,6 +358,10 @@
             "description": "Encryption algorithm of the object",
             "type": "string"
           },
+          "X-QS-Storage-Class": {
+            "description": "Storage class of the object",
+            "type": "string"
+          },
           "Expires": {
             "description": "The Expires header contains the date/time after which the response is considered stale.",
             "type": "string"
@@ -469,6 +483,10 @@
           },
           "X-QS-Encryption-Customer-Algorithm": {
             "description": "Encryption algorithm of the object",
+            "type": "string"
+          },
+          "X-QS-Storage-Class": {
+            "description": "Storage class of the object",
             "type": "string"
           }
         }

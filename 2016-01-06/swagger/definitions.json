@@ -371,5 +371,169 @@
         "type": "string"
       }
     }
+  },
+  "rule": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "rule id",
+        "type": "string"
+      },
+      "status": {
+        "description": "rule status",
+        "type": "string",
+        "enum": [
+          "enabled",
+          "disabled"
+        ]
+      },
+      "filter": {
+        "$ref": "#/definitions/filter"
+      },
+      "expiration": {
+        "$ref": "#/definitions/expiration"
+      },
+      "abort_incomplete_multipart_upload": {
+        "$ref": "#/definitions/abort_incomplete_multipart_upload"
+      },
+      "transition": {
+        "$ref": "#/definitions/transition"
+      },
+      "days": {
+        "description": null,
+        "type": "Integer"
+      },
+      "days_after_initiation": {
+        "description": null,
+        "type": "Integer"
+      },
+      "storage_class": {
+        "description": null,
+        "type": "Integer"
+      }
+    },
+    "required": [
+      "id",
+      "status",
+      "filter"
+    ]
+  },
+  "filter": {
+    "type": "object",
+    "properties": {
+      "prefix": {
+        "description": "Prefix matching",
+        "type": "string"
+      },
+      "required": [
+        "prefix"
+      ]
+    }
+  },
+  "expiration": {
+    "type": "object",
+    "properties": {
+      "days": {
+        "description": null,
+        "type": "Integer"
+      }
+    }
+  },
+  "abort_incomplete_multipart_upload": {
+    "type": "object",
+    "properties": {
+      "days_after_initiation": {
+        "description": null,
+        "type": "Integer"
+      }
+    },
+    "required": [
+      "days_after_initiation"
+    ]
+  },
+  "transition": {
+    "type": "object",
+    "properties": {
+      "days": {
+        "description": null,
+        "type": "Integer"
+      },
+      "storage_class": {
+        "description": null,
+        "type": "Integer"
+      }
+    },
+    "required": [
+      "storage_class"
+    ]
+  },
+  "notifications": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "notification id",
+        "type": "string"
+      },
+      "event_types": {
+        "description": null,
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "create_object",
+            "delete_object",
+            "abort_multipart",
+            "complete_multipart"
+          ]
+        }
+      },
+      "object_filters": {
+        "description": null,
+        "type": "string"
+      },
+      "cloudfunc": {
+        "description": null,
+        "type": "string",
+        "enum": [
+          "create_object",
+          "delete_object",
+          "abort_multipart"
+        ]
+      },
+      "cloudfunc_args": {
+        "$ref": "#/definitions/cloudfunc_args"
+      },
+      "notify_url": {
+        "description": null,
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "event_types",
+      "cloudfunc"
+    ]
+  },
+  "cloudfunc_args": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "key_prefix": {
+        "type": "string",
+        "default": "gen"
+      },
+      "key_seprate": {
+        "type": "string",
+        "default": "_"
+      },
+      "save_bucket": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action"
+    ]
   }
 }

@@ -48,6 +48,15 @@
     "/{bucketName}?uploads": {
       "$ref": "./bucket_uploads.json"
     },
+    "/{bucketName}?Lifecycle": {
+      "$ref": "./Lifecycle.json"
+    },
+    "/{bucketName}?Notification": {
+      "$ref": "./Notification.json"
+    },
+    "/{bucketName}?Metadata": {
+      "$ref": "./Metadata.json"
+    },
     "/{bucketName}/{objectKey}": {
       "$ref": "./object.json"
     },
@@ -120,6 +129,27 @@
     },
     "uploads": {
       "$ref": "./definitions.json#/uploads"
+    },
+    "rule": {
+      "$ref": "./definitions.json#/rule"
+    },
+    "filter": {
+      "$ref": "./definitions.json#/filter"
+    },
+    "expiration": {
+      "$ref": "./definitions.json#/expiration"
+    },
+    "abort_incomplete_multipart_upload": {
+      "$ref": "./definitions.json#/abort_incomplete_multipart_upload"
+    },
+    "transition": {
+      "$ref": "./definitions.json#/transition"
+    },
+    "notifications": {
+      "$ref": "./definitions.json#/notifications"
+    },
+    "cloudfunc_args": {
+      "$ref": "./definitions.json#/cloudfunc_args"
     }
   }
 }

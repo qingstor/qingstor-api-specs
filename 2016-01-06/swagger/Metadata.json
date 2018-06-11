@@ -1,0 +1,115 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "put": {
+    "tags": [
+      "Metadata"
+    ],
+    "operationId": "PutMetadata",
+    "summary": "PUT Metadata",
+    "description": "Create a new Metadata.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/common/metadata"
+    },
+    "parameters": [
+      {
+        "name": "Cache-Control",
+        "description": "Specify the caching mechanism that the request and response follow",
+        "type": "string",
+        "in": "head"
+      },
+      {
+        "name": "Content-Disposition",
+        "description": "Specify the default filename when an object is downloaded",
+        "type": "string",
+        "in": "head"
+      },
+      {
+        "name": "Content-Encoding",
+        "description": "Specify the content encoding type of the object",
+        "type": "string",
+        "in": "head"
+      },
+      {
+        "name": "Expires",
+        "description": "Respond to the expiration date and time",
+        "type": "string",
+        "in": "head"
+      },
+      {
+        "name": "x-qs-meta-*",
+        "description": "Custom metadata",
+        "type": "string",
+        "in": "head"
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "Metadata created"
+      }
+    }
+  },
+  "get": {
+    "tags": [
+      "Metadata"
+    ],
+    "operationId": "GetMetadata",
+    "summary": "GET Metadata",
+    "description": "GET Metadata.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/common/metadata"
+    },
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "Cache-Control": {
+              "description": "caching mechanism",
+              "type": "string"
+            },
+            "Content-Disposition": {
+              "description": "the default filename when an object is downloaded",
+              "type": "string"
+            },
+            "Content-Encoding": {
+              "description": "the content encoding type of the object",
+              "type": "string"
+            },
+            "Expires": {
+              "description": "the expiration date and time",
+              "type": "string"
+            },
+            "x-qs-meta-*": {
+              "description": "Custom metadata",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Metadata"
+    ],
+    "operationId": "DeleteMetadata",
+    "summary": "DELETE Metadata",
+    "description": "Delete a Metadata.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/common/metadata"
+    },
+    "responses": {
+      "204": {
+        "description": "Metadata deleted"
+      }
+    }
+  }
+}

@@ -412,11 +412,11 @@
       "prefix": {
         "description": "Prefix matching",
         "type": "string"
-      },
-      "required": [
-        "prefix"
-      ]
-    }
+      }
+    },
+    "required": [
+      "prefix"
+    ]
   },
   "expiration": {
     "type": "object",
@@ -463,7 +463,7 @@
         "type": "string"
       },
       "event_types": {
-        "description": null,
+        "description": "event types",
         "type": "array",
         "items": {
           "type": "string",

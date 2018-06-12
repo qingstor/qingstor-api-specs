@@ -398,18 +398,6 @@
       },
       "transition": {
         "$ref": "#/definitions/transition"
-      },
-      "days": {
-        "description": null,
-        "type": "Integer"
-      },
-      "days_after_initiation": {
-        "description": null,
-        "type": "Integer"
-      },
-      "storage_class": {
-        "description": null,
-        "type": "Integer"
       }
     },
     "required": [

@@ -49,10 +49,10 @@
       "$ref": "./bucket_uploads.json"
     },
     "/{bucketName}?Lifecycle": {
-      "$ref": "./Lifecycle.json"
+      "$ref": "./bucket_lifecycle.json"
     },
     "/{bucketName}?Notification": {
-      "$ref": "./Notification.json"
+      "$ref": "./bucket_notification.json"
     },
     "/{bucketName}?Metadata": {
       "$ref": "./Metadata.json"
@@ -152,4 +152,5 @@
       "$ref": "./definitions.json#/cloudfunc_args"
     }
   }
+  
 }

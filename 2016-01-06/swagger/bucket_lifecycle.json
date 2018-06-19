@@ -85,8 +85,9 @@
     },
     "responses": {
       "204": {
-        "description": "OK"
+        "description": "Lifecycle deleted"
       }
     }
   }
+  
 }

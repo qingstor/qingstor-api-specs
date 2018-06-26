@@ -22,31 +22,31 @@
         "name": "Cache-Control",
         "description": "Specify the caching mechanism that the request and response follow",
         "type": "string",
-        "in": "head"
+        "in": "header"
       },
       {
         "name": "Content-Disposition",
         "description": "Specify the default filename when an object is downloaded",
         "type": "string",
-        "in": "head"
+        "in": "header"
       },
       {
         "name": "Content-Encoding",
         "description": "Specify the content encoding type of the object",
         "type": "string",
-        "in": "head"
+        "in": "header"
       },
       {
         "name": "Expires",
         "description": "Respond to the expiration date and time",
         "type": "string",
-        "in": "head"
+        "in": "header"
       },
       {
         "name": "x-qs-meta-*",
         "description": "Custom metadata",
         "type": "string",
-        "in": "head"
+        "in": "header"
       }
     ],
     "responses": {

@@ -423,7 +423,7 @@
     "properties": {
       "days": {
         "description": "days",
-        "type": "Integer"
+        "type": "integer"
       }
     }
   },
@@ -432,7 +432,7 @@
     "properties": {
       "days_after_initiation": {
         "description": "days after initiation",
-        "type": "Integer"
+        "type": "integer"
       }
     },
     "required": [
@@ -444,11 +444,11 @@
     "properties": {
       "days": {
         "description": "days",
-        "type": "Integer"
+        "type": "integer"
       },
       "storage_class": {
         "description": "storage class",
-        "type": "Integer"
+        "type": "integer"
       }
     },
     "required": [

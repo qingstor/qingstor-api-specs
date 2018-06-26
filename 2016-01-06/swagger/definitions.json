@@ -422,7 +422,7 @@
     "type": "object",
     "properties": {
       "days": {
-        "description": null,
+        "description": "days",
         "type": "Integer"
       }
     }
@@ -431,7 +431,7 @@
     "type": "object",
     "properties": {
       "days_after_initiation": {
-        "description": null,
+        "description": "days after initiation",
         "type": "Integer"
       }
     },
@@ -443,11 +443,11 @@
     "type": "object",
     "properties": {
       "days": {
-        "description": null,
+        "description": "days",
         "type": "Integer"
       },
       "storage_class": {
-        "description": null,
+        "description": "storage class",
         "type": "Integer"
       }
     },
@@ -476,11 +476,11 @@
         }
       },
       "object_filters": {
-        "description": null,
+        "description": "Object name matching rule",
         "type": "string"
       },
       "cloudfunc": {
-        "description": null,
+        "description": "Event processing service",
         "type": "string",
         "enum": [
           "create_object",
@@ -492,7 +492,7 @@
         "$ref": "#/definitions/cloudfunc_args"
       },
       "notify_url": {
-        "description": null,
+        "description": "notify url",
         "type": "string"
       }
     },

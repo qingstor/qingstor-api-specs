@@ -43,7 +43,7 @@
         "in": "header"
       },
       {
-        "name": "x-qs-meta-*",
+        "name": "x-qs-meta-",
         "description": "Custom metadata",
         "type": "string",
         "in": "header"

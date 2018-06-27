@@ -87,7 +87,7 @@
               "description": "the expiration date and time",
               "type": "string"
             },
-            "x-qs-meta-*": {
+            "x-qs-meta-": {
               "description": "Custom metadata",
               "type": "string"
             }

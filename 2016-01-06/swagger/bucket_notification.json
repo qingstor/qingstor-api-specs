@@ -1,0 +1,92 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "put": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "PutBucketNotification",
+    "summary": "PUT Bucket Notification",
+    "description": "Set Notification information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/notification/put_notification.html"
+    },
+    "parameters": [
+      {
+        "name": "Body",
+        "description": "The request body",
+        "in": "body",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "notifications": {
+              "description": "Bucket Notifications",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/notification"
+              }
+            }
+          },
+          "required": [
+            "notifications"
+          ]
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  },
+  "get": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "GetBucketNotification",
+    "summary": "GET Bucket Notification",
+    "description": "Get Notification information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/notification/get_notification.html"
+    },
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "notifications": {
+              "description": "Bucket Notifications",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/notifications"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "DeleteBucketNotification",
+    "summary": "DELETE Bucket Notification",
+    "description": "Delete Notification information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/notification/delete_notification.html"
+    },
+    "responses": {
+      "204": {
+        "description": "notification deleted"
+      }
+    }
+  }
+}

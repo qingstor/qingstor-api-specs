@@ -371,5 +371,157 @@
         "type": "string"
       }
     }
-  }
+  },
+  "rule": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "rule id",
+        "type": "string"
+      },
+      "status": {
+        "description": "rule status",
+        "type": "string",
+        "enum": [
+          "enabled",
+          "disabled"
+        ]
+      },
+      "filter": {
+        "$ref": "#/definitions/filter"
+      },
+      "expiration": {
+        "$ref": "#/definitions/expiration"
+      },
+      "abort_incomplete_multipart_upload": {
+        "$ref": "#/definitions/abort_incomplete_multipart_upload"
+      },
+      "transition": {
+        "$ref": "#/definitions/transition"
+      }
+    },
+    "required": [
+      "id",
+      "status",
+      "filter"
+    ]
+  },
+  "filter": {
+    "type": "object",
+    "properties": {
+      "prefix": {
+        "description": "Prefix matching",
+        "type": "string"
+      }
+    },
+    "required": [
+      "prefix"
+    ]
+  },
+  "expiration": {
+    "type": "object",
+    "properties": {
+      "days": {
+        "description": "days",
+        "type": "integer"
+      }
+    }
+  },
+  "abort_incomplete_multipart_upload": {
+    "type": "object",
+    "properties": {
+      "days_after_initiation": {
+        "description": "days after initiation",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "days_after_initiation"
+    ]
+  },
+  "transition": {
+    "type": "object",
+    "properties": {
+      "days": {
+        "description": "days",
+        "type": "integer"
+      },
+      "storage_class": {
+        "description": "storage class",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "storage_class"
+    ]
+  },
+  "notifications": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "notification id",
+        "type": "string"
+      },
+      "event_types": {
+        "description": "event types",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "create_object",
+            "delete_object",
+            "abort_multipart",
+            "complete_multipart"
+          ]
+        }
+      },
+      "object_filters": {
+        "description": "Object name matching rule",
+        "type": "string"
+      },
+      "cloudfunc": {
+        "description": "Event processing service",
+        "type": "string",
+        "enum": [
+          "create_object",
+          "delete_object",
+          "abort_multipart"
+        ]
+      },
+      "cloudfunc_args": {
+        "$ref": "#/definitions/cloudfunc_args"
+      },
+      "notify_url": {
+        "description": "notify url",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "event_types",
+      "cloudfunc"
+    ]
+  },
+  "cloudfunc_args": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "key_prefix": {
+        "type": "string",
+        "default": "gen"
+      },
+      "key_seprate": {
+        "type": "string",
+        "default": "_"
+      },
+      "save_bucket": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action"
+    ]
+  } 
 }

@@ -1,0 +1,92 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "put": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "PutBucketLifecycle",
+    "summary": "PUT Bucket Lifecycle",
+    "description": "Set Lifecycle information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/lifecycle/put_lifecycle.html"
+    },
+    "parameters": [
+      {
+        "name": "Body",
+        "description": "The request body",
+        "in": "body",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "rule": {
+              "description": "Bucket Lifecycle rule",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/rule"
+              }
+            }
+          },
+          "required": [
+            "rule"
+          ]
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  },
+  "get": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "GetBucketLifecycle",
+    "summary": "GET Bucket Lifecycle",
+    "description": "Get Lifecycle information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/lifecycle/get_lifecycle.html"
+    },
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "rule": {
+              "description": "Bucket Lifecycle rule",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/rule"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "DeleteBucketLifecycle",
+    "summary": "DELETE Bucket Lifecycle",
+    "description": "Delete Lifecycle information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/lifecycle/delete_lifecycle.html"
+    },
+    "responses": {
+      "204": {
+        "description": "Lifecycle deleted"
+      }
+    }
+  }
+}

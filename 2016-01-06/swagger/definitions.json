@@ -454,5 +454,74 @@
     "required": [
       "storage_class"
     ]
-  }
+  },
+  "notifications": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "notification id",
+        "type": "string"
+      },
+      "event_types": {
+        "description": "event types",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "create_object",
+            "delete_object",
+            "abort_multipart",
+            "complete_multipart"
+          ]
+        }
+      },
+      "object_filters": {
+        "description": "Object name matching rule",
+        "type": "string"
+      },
+      "cloudfunc": {
+        "description": "Event processing service",
+        "type": "string",
+        "enum": [
+          "create_object",
+          "delete_object",
+          "abort_multipart"
+        ]
+      },
+      "cloudfunc_args": {
+        "$ref": "#/definitions/cloudfunc_args"
+      },
+      "notify_url": {
+        "description": "notify url",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "event_types",
+      "cloudfunc"
+    ]
+  },
+  "cloudfunc_args": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string"
+      },
+      "key_prefix": {
+        "type": "string",
+        "default": "gen"
+      },
+      "key_seprate": {
+        "type": "string",
+        "default": "_"
+      },
+      "save_bucket": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action"
+    ]
+  } 
 }

@@ -455,7 +455,7 @@
       "storage_class"
     ]
   },
-  "notifications": {
+  "notification": {
     "type": "object",
     "properties": {
       "id": {

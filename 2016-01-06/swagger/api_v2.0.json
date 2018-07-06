@@ -142,8 +142,8 @@
     "transition": {
       "$ref": "./definitions.json#/transition"
     },
-    "notifications": {
-      "$ref": "./definitions.json#/notifications"
+    "notification": {
+      "$ref": "./definitions.json#/notification"
     },
     "cloudfunc_args": {
       "$ref": "./definitions.json#/cloudfunc_args"

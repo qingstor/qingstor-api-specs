@@ -48,6 +48,12 @@
     "/{bucketName}?uploads": {
       "$ref": "./bucket_uploads.json"
     },
+    "/{bucketName}?lifecycle": {
+      "$ref": "./bucket_lifecycle.json"
+    },
+    "/{bucketName}?notification": {
+      "$ref": "./bucket_notification.json"
+    },
     "/{bucketName}/{objectKey}": {
       "$ref": "./object.json"
     },

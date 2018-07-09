@@ -483,9 +483,9 @@
         "description": "Event processing service",
         "type": "string",
         "enum": [
-          "create_object",
-          "delete_object",
-          "abort_multipart"
+          "tupu-porn",
+          "notifier",
+          "image"
         ]
       },
       "cloudfunc_args": {

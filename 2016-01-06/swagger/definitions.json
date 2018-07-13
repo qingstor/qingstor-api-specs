@@ -478,7 +478,6 @@
       "object_filters": {
         "description": "Object name matching rule",
         "type": "array",
-        "format": "string",
         "items": {
           "type": "string"
         }

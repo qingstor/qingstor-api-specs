@@ -477,7 +477,11 @@
       },
       "object_filters": {
         "description": "Object name matching rule",
-        "type": "string"
+        "type": "array",
+        "format": "string",
+        "items": {
+          "type": "string"
+        }
       },
       "cloudfunc": {
         "description": "Event processing service",

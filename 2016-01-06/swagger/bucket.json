@@ -92,6 +92,10 @@
               "description": "The last key in keys list",
               "type": "string"
             },
+	    "has_more": {
+	      "description": "Indicate if these are more results in the next page",
+	      "type":"boolean"
+	    },
             "keys": {
               "description": "Object keys",
               "type": "array",

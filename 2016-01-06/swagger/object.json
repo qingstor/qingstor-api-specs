@@ -42,6 +42,12 @@
         "in": "header"
       },
       {
+        "name": "Content-Encoding",
+        "description": "Object content encoding",
+        "type": "string",
+        "in": "header"
+      },
+      {
         "name": "Expect",
         "description": "Used to indicate that particular server behaviors are required by the client",
         "type": "string",
@@ -201,6 +207,12 @@
         "description": "Object content type",
         "type": "string",
         "in": "formData"
+      },
+      {
+        "name": "Content-Encoding",
+        "description": "Object content encoding",
+        "type": "string",
+        "in": "header"
       },
       {
         "name": "key",

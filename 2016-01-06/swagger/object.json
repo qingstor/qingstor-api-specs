@@ -22,6 +22,12 @@
     },
     "parameters": [
       {
+        "name": "Cache-Control",
+        "description": "Object cache control",
+        "type": "string",
+        "in": "header"
+      },
+      {
         "name": "Content-Length",
         "description": "Object content size",
         "type": "integer",
@@ -201,6 +207,12 @@
         "description": "Request signature",
         "type": "string",
         "in": "formData"
+      },
+      {
+        "name": "Cache-Control",
+        "description": "Object cache control",
+        "type": "string",
+        "in": "header"
       },
       {
         "name": "Content-Type",

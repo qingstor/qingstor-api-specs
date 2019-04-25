@@ -55,6 +55,10 @@
         "description": "Object created time",
         "type": "string",
         "format": "date-time"
+      },
+      "storage_class": {
+        "description": "Object storage class",
+        "type": "string"
       }
     }
   },

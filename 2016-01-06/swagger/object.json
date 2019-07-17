@@ -159,7 +159,7 @@
       {
         "name": "X-QS-MetaData",
         "description": "User-defined metadata",
-        "type": "map[string]string",
+        "type": "map",
         "in": "header"
       },
       {

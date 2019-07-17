@@ -568,7 +568,7 @@
             "boolean",
             "integer",
             "array",
-            "map[string]string"
+            "map"
           ]
         },
         "format": {

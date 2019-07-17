@@ -157,6 +157,12 @@
         ]
       },
       {
+        "name": "X-QS-MetaData",
+        "description": "User-defined metadata",
+        "type": "map[string]string",
+        "in": "header"
+      },
+      {
         "name": "Body",
         "description": "The request body",
         "in": "body",

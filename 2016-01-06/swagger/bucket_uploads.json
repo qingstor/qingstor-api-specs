@@ -90,6 +90,10 @@
               "description": "The last upload_id in uploads list",
               "type": "string"
             },
+            "has_more": {
+              "description": "Indicate if these are more results in the next page",
+              "type":"boolean"
+            },
             "common_prefixes": {
               "description": "Other object keys that share common prefixes",
               "type": "array",

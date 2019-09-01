@@ -361,12 +361,6 @@
         "description": "MD5sum of encryption key",
         "type": "string",
         "in": "header"
-      },
-      {
-        "name": "X-QS-MetaData",
-        "description": "User-defined metadata",
-        "type": "map",
-        "in": "header"
       }
     ],
     "responses": {
@@ -397,6 +391,11 @@
           "X-QS-Storage-Class": {
             "description": "Storage class of the object",
             "type": "string"
+          },
+          "X-QS-MetaData": {
+            "description": "User-defined metadata",
+            "type": "map",
+            "in": "header"
           },
           "Expires": {
             "description": "The Expires header contains the date/time after which the response is considered stale.",
@@ -470,12 +469,6 @@
         "in": "header"
       },
       {
-        "name": "X-QS-MetaData",
-        "description": "User-defined metadata",
-        "type": "map",
-        "in": "header"
-      },
-      {
         "name": "If-Modified-Since",
         "description": "Check whether the object has been modified",
         "type": "string",
@@ -530,6 +523,11 @@
           "X-QS-Storage-Class": {
             "description": "Storage class of the object",
             "type": "string"
+          },
+          "X-QS-MetaData": {
+            "description": "User-defined metadata",
+            "type": "map",
+            "in": "header"
           }
         }
       }

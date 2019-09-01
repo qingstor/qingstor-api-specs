@@ -55,6 +55,12 @@
             "STANDARD",
             "STANDARD_IA"
           ]
+        },
+        {
+          "name": "X-QS-MetaData",
+          "description": "User-defined metadata",
+          "type": "map",
+          "in": "header"
         }
       ],
       "responses": {

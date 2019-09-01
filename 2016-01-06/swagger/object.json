@@ -361,6 +361,12 @@
         "description": "MD5sum of encryption key",
         "type": "string",
         "in": "header"
+      },
+      {
+        "name": "X-QS-MetaData",
+        "description": "User-defined metadata",
+        "type": "map",
+        "in": "header"
       }
     ],
     "responses": {
@@ -461,6 +467,12 @@
         "name": "X-QS-Encryption-Customer-Key-MD5",
         "description": "MD5sum of encryption key",
         "type": "string",
+        "in": "header"
+      },
+      {
+        "name": "X-QS-MetaData",
+        "description": "User-defined metadata",
+        "type": "map",
         "in": "header"
       },
       {

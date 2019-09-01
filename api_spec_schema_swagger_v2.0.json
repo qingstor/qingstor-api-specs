@@ -427,7 +427,8 @@
             "number",
             "integer",
             "boolean",
-            "array"
+            "array",
+            "map"
           ]
         },
         "format": {

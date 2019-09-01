@@ -394,8 +394,7 @@
           },
           "X-QS-MetaData": {
             "description": "User-defined metadata",
-            "type": "map",
-            "in": "header"
+            "type": "map"
           },
           "Expires": {
             "description": "The Expires header contains the date/time after which the response is considered stale.",
@@ -526,8 +525,7 @@
           },
           "X-QS-MetaData": {
             "description": "User-defined metadata",
-            "type": "map",
-            "in": "header"
+            "type": "map"
           }
         }
       }

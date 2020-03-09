@@ -12,6 +12,18 @@
         "description": "Limits results to buckets that in the location",
         "type": "string",
         "in": "header"
+      },
+      {
+        "name": "offset",
+        "description": "Limit results to keys that start at this offset",
+        "type": "integer",
+        "in": "query"
+      },
+      {
+        "name": "limit",
+        "description": "Results count limit",
+        "type": "integer",
+        "in": "query"
       }
     ],
     "responses": {

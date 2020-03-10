@@ -22,7 +22,7 @@
   "basePath": "/",
   "paths": {
     "/": {
-      "$ref": "./qingstor.json"
+      "$ref": "./service.json"
     },
     "/{bucketName}": {
       "$ref": "./bucket.json"

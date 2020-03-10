@@ -1,7 +1,7 @@
 {
   "get": {
     "operationId": "ListBuckets",
-    "summary": "GET Service",
+    "summary": "Get Service",
     "description": "Retrieve the bucket list.",
     "externalDocs": {
       "url": "https://docs.qingcloud.com/qingstor/api/service/get.html"

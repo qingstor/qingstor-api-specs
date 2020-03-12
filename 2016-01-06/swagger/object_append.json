@@ -1,0 +1,85 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/objectKey"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "post": {
+    "tags": [
+      "Object"
+    ],
+    "operationId": "AppendObject",
+    "summary": "Append Object",
+    "description": "Append the Object.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/object/append.html"
+    },
+    "parameters": [
+      {
+        "name": "position",
+        "description": "Object append position",
+        "type": "integer",
+        "format": "int64",
+        "required": true,
+        "in": "query"
+      },
+      {
+        "name": "Content-Length",
+        "description": "Object content size",
+        "type": "integer",
+        "format": "int64",
+        "required": true,
+        "in": "header"
+      },
+      {
+        "name": "Content-MD5",
+        "description": "Object MD5sum",
+        "type": "string",
+        "in": "header"
+      },
+      {
+        "name": "Content-Type",
+        "description": "Object content type",
+        "type": "string",
+        "in": "header"
+      },
+      {
+        "name": "X-QS-Storage-Class",
+        "description": "Specify the storage class for object",
+        "type": "string",
+        "in": "header",
+        "enum": [
+          "STANDARD",
+          "STANDARD_IA"
+        ]
+      },
+      {
+        "name": "Body",
+        "description": "The request body",
+        "in": "body",
+        "schema": {
+          "type": "string",
+          "format": "binary"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Object appended",
+        "headers": {
+          "X-QS-Next-Append-Position": {
+            "description": "next position when append data to this object",
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      }
+    }
+  }
+}

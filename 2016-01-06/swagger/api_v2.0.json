@@ -57,6 +57,9 @@
     "/{bucketName}/{objectKey}": {
       "$ref": "./object.json"
     },
+    "/{bucketName}/{objectKey}?append": {
+      "$ref": "./object_append.json"
+    },
     "/{bucketName}/{objectKey}?uploads": {
       "$ref": "./object_multipart.json#/uploads"
     },

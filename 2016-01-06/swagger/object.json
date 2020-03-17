@@ -523,6 +523,15 @@
             "description": "Storage class of the object",
             "type": "string"
           },
+          "X-QS-Object-Type": {
+            "description": "Object type of this object, only returns when object type is appendable",
+            "type": "string"
+          },
+          "X-QS-Next-Append-Position": {
+            "description": "Next position when append data to this object, only returns when object type is appendable",
+            "type": "integer",
+            "format": "int64"
+          },
           "X-QS-MetaData": {
             "description": "User-defined metadata",
             "type": "map"

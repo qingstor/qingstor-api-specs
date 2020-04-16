@@ -45,6 +45,9 @@
     "/{bucketName}?mirror": {
       "$ref": "./bucket_external_mirror.json"
     },
+    "/{bucketName}?logging": {
+      "$ref": "./bucket_logging.json"
+    },
     "/{bucketName}?uploads": {
       "$ref": "./bucket_uploads.json"
     },
@@ -147,6 +150,9 @@
     },
     "notification": {
       "$ref": "./definitions.json#/notification"
+    },
+    "logging": {
+      "$ref": "./definitions.json#/logging"
     },
     "cloudfunc_args": {
       "$ref": "./definitions.json#/cloudfunc_args"

@@ -530,5 +530,22 @@
     "required": [
       "action"
     ]
-  } 
+  },
+  "logging": {
+    "type": "object",
+    "properties": {
+      "target_bucket": {
+        "description": "The name of the bucket used to store logs. The user must be the owner of the bucket.",
+        "type": "string"
+      },
+      "target_prefix": {
+        "description": "generated log files' common prefix",
+        "type": "string"
+      }
+    },
+    "required": [
+      "target_bucket",
+      "target_prefix"
+    ]
+  }
 }

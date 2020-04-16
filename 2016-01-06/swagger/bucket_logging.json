@@ -1,0 +1,71 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "put": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "PutBucketLogging",
+    "summary": "PUT Bucket Logging",
+    "description": "Set bucket logging of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/logging/put_logging.html"
+    },
+    "parameters": [
+      {
+        "name": "logging",
+        "description": "The request body",
+        "in": "body",
+        "schema": {
+          "$ref": "#/definitions/logging"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  },
+  "get": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "GetBucketLogging",
+    "summary": "GET Bucket Logging",
+    "description": "Get bucket logging setting of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/logging/get_logging.html"
+    },
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "$ref": "#/definitions/logging"
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "DeleteBucketLogging",
+    "summary": "DELETE Bucket Logging",
+    "description": "Delete bucket logging setting of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/logging/delete_logging.html"
+    },
+    "responses": {
+      "204": {
+        "description": "No content"
+      }
+    }
+  }
+}

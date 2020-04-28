@@ -547,5 +547,65 @@
       "target_bucket",
       "target_prefix"
     ]
+  },
+  "cname": {
+    "description": "cname record will bound to a specific bucket.",
+    "type": "object",
+    "properties": {
+      "domain": {
+        "description": "The domain name to be bound to the bucket. The domain name must have been registered and not bound to another bucket.",
+        "type": "string"
+      },
+      "type": {
+        "description": "The purpose of the domain name to be bound. Currently supports two types, normal and website.",
+        "type": "string",
+        "enum": [
+          "normal",
+          "website"
+        ]
+      }
+    },
+    "required": [
+      "domain"
+    ]
+  },
+  "cname_record": {
+    "description": "represents a single item of cname record.",
+    "type": "object",
+    "properties": {
+      "domain": {
+        "description": "The domain name to be bound to the bucket. The domain name must have been registered and not bound to another bucket.",
+        "type": "string"
+      },
+      "type": {
+        "description": "The purpose of the domain name to be bound. Currently supports two types, normal and website.",
+        "type": "string",
+        "enum": [
+          "normal",
+          "website"
+        ]
+      },
+      "created": {
+        "description": "the created time of this CNAME record.",
+        "type": "string"
+      }
+    }
+  },
+  "cname_records": {
+    "description": "the response model of GET Bucket CNAME.",
+    "type": "object",
+    "properties": {
+      "cname_records": {
+        "description": "the details of all eligible CNAME records.",
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/cname_record"
+        }
+      },
+      "count": {
+        "description": "the count of all eligible CNAME records.",
+        "type": "integer"
+      }
+    }
   }
 }

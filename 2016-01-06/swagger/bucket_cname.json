@@ -1,0 +1,104 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "put": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "PutBucketCNAME",
+    "summary": "PUT Bucket CNAME",
+    "description": "Set bucket CNAME of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/cname/put_cname.html"
+    },
+    "parameters": [
+      {
+        "name": "cname",
+        "description": "the domain you want set as a CNAME record and its type.",
+        "in": "body",
+        "schema": {
+          "$ref": "#/definitions/cname"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  },
+  "get": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "GetBucketCNAME",
+    "summary": "GET Bucket CNAME",
+    "description": "Get bucket CNAME setting of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/cname/get_cname.html"
+    },
+    "parameters": [
+      {
+        "name": "type",
+        "description": "Limit the type used for query, normal will be recognized if empty.",
+        "type": "string",
+        "enum": [
+          "website",
+          "normal"
+        ],
+        "required": false,
+        "in": "query"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "$ref": "#/definitions/cname_records"
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "DeleteBucketCNAME",
+    "summary": "DELETE Bucket CNAME",
+    "description": "Delete bucket CNAME setting of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/cname/delete_cname.html"
+    },
+    "parameters": [
+      {
+        "name": "cname",
+        "description": "the domain will deleted from cname records.",
+        "in": "body",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "domain": {
+              "description": "domain name",
+              "type": "string"
+            }
+          },
+          "required": [
+            "domain"
+          ]
+        },
+        "required": true
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": "No content"
+      }
+    }
+  }
+}

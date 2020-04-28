@@ -48,6 +48,9 @@
     "/{bucketName}?logging": {
       "$ref": "./bucket_logging.json"
     },
+    "/{bucketName}?cname": {
+      "$ref": "./bucket_cname.json"
+    },
     "/{bucketName}?uploads": {
       "$ref": "./bucket_uploads.json"
     },
@@ -153,6 +156,15 @@
     },
     "logging": {
       "$ref": "./definitions.json#/logging"
+    },
+    "cname": {
+      "$ref": "./definitions.json#/cname"
+    },
+    "cname_record": {
+      "$ref": "./definitions.json#/cname_record"
+    },
+    "cname_records": {
+      "$ref": "./definitions.json#/cname_records"
     },
     "cloudfunc_args": {
       "$ref": "./definitions.json#/cloudfunc_args"

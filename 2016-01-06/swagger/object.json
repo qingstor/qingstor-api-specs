@@ -84,6 +84,16 @@
         "in": "header"
       },
       {
+        "name": "X-QS-Metadata-Directive",
+        "description": "Use for modified metadata, valid (COPY/REPLACE)",
+        "type": "string",
+        "in": "header",
+        "enum": [
+          "COPY",
+          "REPLACE"
+        ]
+      },
+      {
         "name": "X-QS-Copy-Source-If-Modified-Since",
         "description": "Check whether the copy source has been modified",
         "type": "string",

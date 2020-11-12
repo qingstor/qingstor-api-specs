@@ -1,0 +1,93 @@
+{
+    "parameters": [
+      {
+        "$ref": "#/parameters/bucketName"
+      },
+      {
+        "$ref": "#/parameters/zone"
+      }
+    ],
+    "put": {
+      "tags": [
+        "Bucket"
+      ],
+      "operationId": "PutBucketReplication",
+      "summary": "PUT Bucket Replication",
+      "description": "Set Replication information of the bucket.",
+      "externalDocs": {
+        "url": "https://docs.qingcloud.com/qingstor/api/bucket/replication/put_replication.html"
+      },
+      "parameters": [
+        {
+          "name": "Body",
+          "description": "The request body",
+          "in": "body",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "rules": {
+                "description": "Bucket Replication rules",
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/rules"
+                }
+              }
+            },
+            "required": [
+              "rules"
+            ]
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      }
+    },
+    "get": {
+      "tags": [
+        "Bucket"
+      ],
+      "operationId": "GetBucketReplication",
+      "summary": "GET Bucket Replication",
+      "description": "Get Replication information of the bucket.",
+      "externalDocs": {
+        "url": "https://docs.qingcloud.com/qingstor/api/bucket/replication/get_replication.html"
+      },
+      "responses": {
+        "200": {
+          "description": "OK",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "rules": {
+                "description": "Bucket Replication rule",
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/rules"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "delete": {
+      "tags": [
+        "Bucket"
+      ],
+      "operationId": "DeleteBucketReplication",
+      "summary": "DELETE Bucket Replication",
+      "description": "Delete Replication information of the bucket.",
+      "externalDocs": {
+        "url": "https://docs.qingcloud.com/qingstor/api/bucket/replication/delete_replication.html"
+      },
+      "responses": {
+        "204": {
+          "description": "Replication deleted"
+        }
+      }
+    }
+  }
+  

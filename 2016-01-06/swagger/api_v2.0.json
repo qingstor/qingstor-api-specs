@@ -60,6 +60,9 @@
     "/{bucketName}?notification": {
       "$ref": "./bucket_notification.json"
     },
+    "/{bucketName}?replication": {
+      "$ref": "./bucket_replication.json"
+    },
     "/{bucketName}/{objectKey}": {
       "$ref": "./object.json"
     },
@@ -168,6 +171,15 @@
     },
     "cloudfunc_args": {
       "$ref": "./definitions.json#/cloudfunc_args"
+    },
+    "rules": {
+      "$ref": "./definitions.json#/rules"
+    },
+    "filters": {
+      "$ref": "./definitions.json#/filters"
+    },
+    "destination": {
+      "$ref": "./definitions.json#/destination"
     }
   }
 }

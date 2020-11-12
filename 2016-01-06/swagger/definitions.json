@@ -607,5 +607,78 @@
         "type": "integer"
       }
     }
+  },
+  "rules": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "rule id",
+        "type": "string"
+      },
+      "status": {
+        "description": "rule status",
+        "type": "string",
+        "enum": [
+          "enabled",
+          "disabled"
+        ]
+      },
+      "filters": {
+        "$ref": "#/definitions/filters"
+      },
+      "destination": {
+        "$ref": "#/definitions/destination"
+      },
+      "sync_marker": {
+        "description": "rule sync marker",
+        "type": "string",
+        "enum": [
+          "enabled",
+          "disabled"
+        ]
+      },
+      "delete_marker": {
+        "description": "rule delete marker",
+        "type": "string",
+        "enum": [
+          "enabled",
+          "disabled"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "filters",
+      "destination"
+    ]
+  },
+  "filters": {
+    "type": "object",
+    "properties": {
+      "prefix": {
+        "description": "Prefix matching",
+        "type": "string"
+      }
+    }
+  },
+  "destination": {
+    "type": "object",
+    "properties": {
+      "bucket": {
+        "description": "dst bucket name",
+        "type": "string"
+      },
+      "storage_class": {
+        "description": "dst storage class",
+        "type": "string"
+      },
+      "zone": {
+        "description": "dst zone",
+        "type": "string"
+      }
+    },
+    "required": [
+      "bucket"
+    ]
   }
 }

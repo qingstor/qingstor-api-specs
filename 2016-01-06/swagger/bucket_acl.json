@@ -32,10 +32,7 @@
                 "$ref": "#/definitions/acl"
               }
             }
-          },
-          "required": [
-            "acl"
-          ]
+          }
         }
       }
     ],

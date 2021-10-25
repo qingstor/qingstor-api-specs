@@ -452,7 +452,11 @@
       },
       "storage_class": {
         "description": "storage class",
-        "type": "integer"
+        "type": "string",
+        "enum": [
+          "STANDARD_IA",
+          "STANDARD"
+        ]
       }
     },
     "required": [

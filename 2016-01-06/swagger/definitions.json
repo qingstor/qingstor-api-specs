@@ -76,6 +76,58 @@
       }
     }
   },
+  "version_key": {
+    "description": "Object key with versioning-awared",
+    "type": "object",
+    "properties": {
+      "key": {
+        "description": "Object key",
+        "type": "string"
+      },
+      "version_id": {
+        "description": "version_id of the object",
+        "type": "string"
+      },
+      "is_latest": {
+        "description": "Whether this version is the latest object",
+        "type": "boolean"
+      },
+      "delete_marker": {
+        "description": "Whether this version is a delete marker",
+        "type": "boolean"
+      },
+      "mime_type": {
+        "description": "MIME type of the object",
+        "type": "string"
+      },
+      "etag": {
+        "description": "MD5sum of the object",
+        "type": "string"
+      },
+      "size": {
+        "description": "Object content size",
+        "type": "integer",
+        "format": "int64"
+      },
+      "modified": {
+        "description": "Last modified time in unix time format",
+        "type": "integer"
+      },
+      "encrypted": {
+        "description": "Whether this key is encrypted",
+        "type": "boolean"
+      },
+      "created": {
+        "description": "Object created time",
+        "type": "string",
+        "format": "date-time"
+      },
+      "storage_class": {
+        "description": "Object storage class",
+        "type": "string"
+      }
+    }
+  },
   "acl": {
     "description": "Bucket ACL rule",
     "type": "object",
@@ -402,6 +454,12 @@
       },
       "transition": {
         "$ref": "#/definitions/transition"
+      },
+      "noncurrent_version_expiration": {
+        "$ref": "#/definitions/noncurrent_version_expiration"
+      },
+      "noncurrent_version_transition": {
+        "$ref": "#/definitions/noncurrent_version_transition"
       }
     },
     "required": [
@@ -431,6 +489,15 @@
       }
     }
   },
+  "noncurrent_version_expiration": {
+    "type": "object",
+    "properties": {
+      "days": {
+        "description": "days",
+        "type": "integer"
+      }
+    }
+  },
   "abort_incomplete_multipart_upload": {
     "type": "object",
     "properties": {
@@ -444,6 +511,26 @@
     ]
   },
   "transition": {
+    "type": "object",
+    "properties": {
+      "days": {
+        "description": "days",
+        "type": "integer"
+      },
+      "storage_class": {
+        "description": "storage class",
+        "type": "string",
+        "enum": [
+          "STANDARD_IA",
+          "STANDARD"
+        ]
+      }
+    },
+    "required": [
+      "storage_class"
+    ]
+  },
+  "noncurrent_version_transition": {
     "type": "object",
     "properties": {
       "days": {
@@ -684,5 +771,20 @@
     "required": [
       "bucket"
     ]
+  },
+  "versioning": {
+    "description": "versioning status will apply to a specific bucket.",
+    "type": "object",
+    "properties": {
+      "status": {
+        "description": "versioning status",
+        "type": "string",
+        "enum": [
+          "DISABLED",
+          "ENABLED",
+          "SUSPENDED"
+        ]
+      }
+    }
   }
 }

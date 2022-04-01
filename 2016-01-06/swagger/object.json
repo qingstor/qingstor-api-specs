@@ -575,6 +575,26 @@
           "X-QS-MetaData": {
             "description": "User-defined metadata",
             "type": "map"
+          },
+          "Expires": {
+            "description": "The Expires header contains the date/time after which the response is considered stale.",
+            "type": "string"
+          },
+          "Cache-Control": {
+            "description": "The Cache-Control general-header field is used to specify directives for caching mechanisms in both requests and responses.",
+            "type": "string"
+          },
+          "Content-Language": {
+            "description": "The Content-Language entity header is used to describe the language(s) intended for the audience.",
+            "type": "string"
+          },
+          "Content-Encoding": {
+            "description": "The Content-Encoding entity header is used to compress the media-type.",
+            "type": "string"
+          },
+          "Content-Disposition": {
+            "description": "In a multipart/form-data body, the HTTP Content-Disposition general header is a header that can be used on the subpart of a multipart body to give information about the field it applies to.",
+            "type": "string"
           }
         }
       }

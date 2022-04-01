@@ -287,6 +287,13 @@
     },
     "parameters": [
       {
+        "name": "version_id",
+        "description": "Object version id",
+        "type": "string",
+        "required": false,
+        "in": "query"
+      },
+      {
         "name": "response-expires",
         "description": "Specified the Expires response header",
         "type": "string",
@@ -402,6 +409,14 @@
             "description": "Storage class of the object",
             "type": "string"
           },
+          "X-QS-Version-Id": {
+            "description": "version id of the object you get",
+            "type": "string"
+          },
+          "X-QS-Delete-Marker": {
+            "description": "the object you get is a delete marker or not",
+            "type": "boolean"
+          },
           "X-QS-MetaData": {
             "description": "User-defined metadata",
             "type": "map"
@@ -459,6 +474,13 @@
       "url": "https://docs.qingcloud.com/qingstor/api/object/head.html"
     },
     "parameters": [
+      {
+        "name": "version_id",
+        "description": "Object version id",
+        "type": "string",
+        "required": false,
+        "in": "query"
+      },
       {
         "name": "X-QS-Encryption-Customer-Algorithm",
         "description": "Encryption algorithm of the object",
@@ -541,6 +563,14 @@
             "description": "Next position when append data to this object, only returns when object type is appendable",
             "type": "integer",
             "format": "int64"
+          },
+          "X-QS-Version-Id": {
+            "description": "version id of the object you head",
+            "type": "string"
+          },
+          "X-QS-Delete-Marker": {
+            "description": "the object you head is a delete marker or not",
+            "type": "boolean"
           },
           "X-QS-MetaData": {
             "description": "User-defined metadata",
@@ -626,9 +656,28 @@
     "externalDocs": {
       "url": "https://docs.qingcloud.com/qingstor/api/object/delete.html"
     },
+    "parameters": [
+      {
+        "name": "version_id",
+        "description": "Object version id",
+        "type": "string",
+        "required": false,
+        "in": "query"
+      }
+    ],
     "responses": {
       "204": {
-        "description": "Object deleted"
+        "description": "Object deleted",
+        "headers": {
+          "X-QS-Version-Id": {
+            "description": "version id of the new created delete-marker during this delete when bucket is versioned",
+            "type": "string"
+          },
+          "X-QS-Delete-Marker": {
+            "description": "with version_id in query, this indicates if the version deleted is a delete-marker, without version_id, this indicates if the old-object you deleted is a delete-marker",
+            "type": "boolean"
+          }
+        }
       }
     }
   }

@@ -27,6 +27,12 @@
     "/{bucketName}": {
       "$ref": "./bucket.json"
     },
+    "/{bucketName}?versions": {
+      "$ref": "./bucket_versions.json"
+    },
+    "/{bucketName}?versioning": {
+      "$ref": "./bucket_versioning.json"
+    },
     "/{bucketName}?delete": {
       "$ref": "./bucket_delete_multiple_objects.json"
     },
@@ -100,6 +106,12 @@
     "owner": {
       "$ref": "./definitions.json#/owner"
     },
+    "version_key": {
+      "$ref": "./definitions.json#/version_key"
+    },
+    "versioning": {
+      "$ref": "./definitions.json#/versioning"
+    },
     "acl": {
       "$ref": "./definitions.json#/acl"
     },
@@ -153,6 +165,12 @@
     },
     "transition": {
       "$ref": "./definitions.json#/transition"
+    },
+    "noncurrent_version_expiration": {
+      "$ref": "./definitions.json#/noncurrent_version_expiration"
+    },
+    "noncurrent_version_transition": {
+      "$ref": "./definitions.json#/noncurrent_version_transition"
     },
     "notification": {
       "$ref": "./definitions.json#/notification"

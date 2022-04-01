@@ -1,0 +1,116 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "ListObjectVersions",
+    "summary": "List Object Versions",
+    "description": "Retrieve metadata about all versions of the objects in a bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/versions.html"
+    },
+    "parameters": [
+      {
+        "name": "prefix",
+        "description": "Limits results to keys that begin with the prefix",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "delimiter",
+        "description": "Put all keys that share a common prefix into a list",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "key_marker",
+        "description": "Limit results to keys that start at this key_marker",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "version_id_marker",
+        "description": "Specifies the object version you want to start listing from.",
+        "type": "string",
+        "in": "query"
+      },
+      {
+        "name": "limit",
+        "description": "Results count limit",
+        "type": "integer",
+        "in": "query"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Bucket name",
+              "type": "string"
+            },
+            "owner": {
+              "$ref": "#/definitions/owner"
+            },
+            "prefix": {
+              "description": "Prefix that specified in request parameters",
+              "type": "string"
+            },
+            "delimiter": {
+              "description": "Delimiter that specified in request parameters",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Limit that specified in request parameters",
+              "type": "integer"
+            },
+            "key_marker": {
+              "description": "key_marker that specified in request parameters",
+              "type": "string"
+            },
+            "next_key_marker": {
+              "description": "The last key in keys list, use this value for the key_marker request parameter in a subsequent request.",
+              "type": "string"
+            },
+            "version_id_marker": {
+              "description": "version_id_marker that specified in request parameters",
+              "type": "string"
+            },
+            "next_version_id_marker": {
+              "description": "The last version_id of the last key in keys list, use this value for the version_id_marker request parameter in a subsequent request.",
+              "type": "string"
+            },
+            "has_more": {
+              "description": "Indicate if these are more results in the next page",
+              "type": "boolean"
+            },
+            "keys": {
+              "description": "Object keys",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/version_key"
+              }
+            },
+            "common_prefixes": {
+              "description": "Other object keys that share common prefixes",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

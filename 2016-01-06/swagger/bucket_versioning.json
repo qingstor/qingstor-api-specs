@@ -1,0 +1,55 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/parameters/bucketName"
+    },
+    {
+      "$ref": "#/parameters/zone"
+    }
+  ],
+  "put": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "PutBucketVersioning",
+    "summary": "PUT Bucket Versioning",
+    "description": "Set Versioning information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/put_versioning.html"
+    },
+    "parameters": [
+      {
+        "name": "versioning",
+        "description": "the versioning status you want to set",
+        "in": "body",
+        "schema": {
+          "$ref": "#/definitions/versioning"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    }
+  },
+  "get": {
+    "tags": [
+      "Bucket"
+    ],
+    "operationId": "GetBucketVersioning",
+    "summary": "GET Bucket Versioning",
+    "description": "Get Versioning information of the bucket.",
+    "externalDocs": {
+      "url": "https://docs.qingcloud.com/qingstor/api/bucket/get_versioning.html"
+    },
+    "responses": {
+      "200": {
+        "description": "OK",
+        "schema": {
+          "$ref": "#/definitions/versioning"
+        }
+      }
+    }
+  }
+}

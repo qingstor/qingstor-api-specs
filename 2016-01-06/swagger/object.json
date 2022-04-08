@@ -193,6 +193,10 @@
           "X-QS-Encryption-Customer-Algorithm": {
             "description": "Encryption algorithm of the object",
             "type": "string"
+          },
+          "X-QS-Version-Id": {
+            "description": "version id of the object you created",
+            "type": "string"
           }
         }
       }

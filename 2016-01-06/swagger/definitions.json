@@ -110,8 +110,9 @@
         "format": "int64"
       },
       "modified": {
-        "description": "Last modified time in unix time format",
-        "type": "integer"
+        "description": "Last modified time",
+        "type": "string",
+        "format": "date-time"
       },
       "encrypted": {
         "description": "Whether this key is encrypted",

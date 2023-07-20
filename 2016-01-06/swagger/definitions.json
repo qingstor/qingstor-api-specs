@@ -476,10 +476,7 @@
         "description": "Prefix matching",
         "type": "string"
       }
-    },
-    "required": [
-      "prefix"
-    ]
+    }
   },
   "expiration": {
     "type": "object",
